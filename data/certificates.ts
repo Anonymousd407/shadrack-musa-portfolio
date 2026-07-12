@@ -1,11 +1,72 @@
-export type Certificate = {
-  name: string;
-  status: "earned" | "in-progress";
-};
-
-export const certificates: Certificate[] = [
-  { name: "CompTIA Security+", status: "earned" },
-  { name: "CRTA", status: "earned" },
-  { name: "TryHackMe SAL1", status: "earned" },
-  { name: "eJPT", status: "in-progress" },
+export const certificates = [
+  {
+    name: "Security Analyst Level 1 (SAL1)",
+    issuer: "TryHackMe",
+    category: "SOC Analyst / Blue Team",
+    year: "2026",
+    file: "/certificates/SAL1.jpeg",
+  },
+  {
+    name: "SEC1 Web Application Security",
+    issuer: "Security Certification",
+    category: "Web Security / VAPT",
+    year: "2026",
+    file: "/certificates/SEC1.pdf",
+  },
+  {
+    name: "SEC0 Security Fundamentals",
+    issuer: "Security Certification",
+    category: "Cyber Security Fundamentals",
+    year: "2026",
+    file: "/certificates/SEC0.pdf",
+  },
+  {
+    name: "AI Security",
+    issuer: "Artificial Intelligence Security Training",
+    category: "AI Security / Machine Learning Security",
+    year: "2026",
+    file: "/certificates/AI-Security.pdf",
+  },
+  {
+    name: "Red Teaming",
+    issuer: "Cyber Security Training",
+    category: "Offensive Security",
+    year: "2026",
+    file: "/certificates/RED TEAMING.pdf",
+  },
+  {
+    name: "CompTIA PenTest+",
+    issuer: "CompTIA",
+    category: "Penetration Testing",
+    year: "2026",
+    file: "/certificates/CompTIA-Pentest.pdf",
+  },
+  {
+    name: "Junior Penetration Tester",
+    issuer: "TryHackMe",
+    category: "Offensive Security",
+    year: "2026",
+    file: "/certificates/Jr-Penetration-Tester.pdf",
+  },
+  {
+    name: "Cyber Security 101",
+    issuer: "TryHackMe",
+    category: "Cyber Security",
+    year: "2026",
+    file: "/certificates/Cyber-Security-101.pdf",
+  },
+  {
+    name: "MetaCTF Certificate",
+    issuer: "MetaCTF",
+    category: "CTF / Security Research",
+    year: "2026",
+    file: "/certificates/MetaCTF.pdf",
+  },
+  {
+    name: "Cyber Security Hackathon",
+    issuer: "Hackathon",
+    category: "Cyber Security Competition",
+    year: "2026",
+    file: "/certificates/hackthon.pdf",
+  },
 ];

@@ -3,29 +3,48 @@ import { certificates } from "@/data/certificates";
 
 export default function Certificates() {
   return (
-    <section id="certificates" className="mx-auto max-w-5xl px-5 py-10">
+    <section
+      id="certificates"
+      className="mx-auto max-w-5xl px-5 py-16"
+    >
       <TerminalWindow path="shadrack@portfolio: ~/certificates">
-        <p className="prompt font-mono text-sm text-[var(--text-dim)]">cat status.log</p>
+        <p className="font-mono text-sm text-[var(--green)]">
+          $ ls certificates
+        </p>
 
-        <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-          {certificates.map((c) => (
-            <li
-              key={c.name}
-              className="flex items-center justify-between rounded-md border border-[var(--border)] bg-[var(--surface-2)] px-4 py-3 font-mono text-sm"
+        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          {certificates.map((certificate) => (
+            <div
+              key={certificate.name}
+              className="rounded-xl border border-white/10 p-5 hover:border-green-400 transition"
             >
-              <span className="text-[var(--text)]">{c.name}</span>
-              <span
-                className={
-                  c.status === "earned"
-                    ? "text-[var(--green)]"
-                    : "text-[var(--amber)]"
-                }
+              <h3 className="text-lg font-semibold text-[var(--text)]">
+                {certificate.name}
+              </h3>
+
+              <p className="mt-2 text-sm text-gray-400">
+                {certificate.issuer}
+              </p>
+
+              <p className="text-sm text-gray-400">
+                {certificate.category}
+              </p>
+
+              <p className="text-sm text-gray-400">
+                {certificate.year}
+              </p>
+
+              <a
+                href={certificate.file}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-block text-sm text-[var(--green)] hover:underline"
               >
-                {c.status === "earned" ? "[ earned ]" : "[ in progress ]"}
-              </span>
-            </li>
+                View Certificate →
+              </a>
+            </div>
           ))}
-        </ul>
+        </div>
       </TerminalWindow>
     </section>
   );
