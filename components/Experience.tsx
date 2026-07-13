@@ -49,10 +49,6 @@ export default function Experience() {
                     {job.period}
                   </p>
 
-                  <p className="text-gray-400">
-                    {job.location}
-                  </p>
-
                 </div>
 
               </div>
