@@ -1,19 +1,25 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+import AOSProvider from "@/components/AOSProvider";
+
 export const metadata: Metadata = {
-  title: "Shadrack Musa — Cyber Security Engineer & Full-Stack Developer",
+  title: "Shadrack Musa | Cyber Security Engineer",
   description:
-    "Portfolio ya Shadrack Musa: Cyber Security Engineer, Full-Stack Developer na AI Enthusiast. Miradi, ujuzi, na vyeti.",
+    "Cyber Security Engineer, Full Stack Developer and AI Enthusiast Portfolio.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <body className="antialiased">
-        {children}
+        <AOSProvider>
+          {children}
+        </AOSProvider>
       </body>
     </html>
   );

@@ -1,32 +1,31 @@
-import Certificates from "@/components/Certificates";
+import Experience from "@/components/Experience";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
+import Certificates from "@/components/Certificates";
 import Achievements from "@/components/Achievements";
 import Contact from "@/components/Contact";
 
-export default function Home(){
+export default function Home() {
+  return (
+    <>
+      <Navbar />
 
-return(
+      <Hero />
 
-<>
+      <About />
+      <Experience />
+      <Skills />
 
-<Navbar/>
+      <Projects />
 
-<Hero/>
+      <Certificates />
 
-<About/>
+      <Achievements />
 
-<Skills/>
-<Certificates/>
-<Achievements/>
-<Contact/>
-<Projects/>
-
-</>
-
-)
-
+      <Contact />
+    </>
+  );
 }

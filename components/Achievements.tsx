@@ -1,43 +1,49 @@
-import TerminalWindow from "./TerminalWindow";
+"use client";
 
-const achievements = [
-  "Founder of Xploiter Security Tool",
-  "Security Analyst Level 1 (SAL1)",
-  "Junior Penetration Tester",
-  "Cyber Security Researcher",
-  "AI Mobile Money Fraud Detection Researcher",
-  "Healthcare Blockchain Security System Developer",
-  "TryHackMe Security Labs Researcher",
-  "PortSwigger Web Security Researcher",
-  "CTF Player and Security Challenge Participant",
-];
+import { achievements } from "@/data/achievements";
+import TerminalWindow from "./TerminalWindow";
 
 export default function Achievements() {
   return (
     <section
       id="achievements"
-      className="mx-auto max-w-5xl px-5 py-16"
+      className="mx-auto max-w-6xl px-5 py-24"
+      data-aos="fade-up"
     >
+      <TerminalWindow path="shadrack@portfolio:~/achievements">
+        <h2 className="text-3xl font-bold text-white">
+          Achievements
+        </h2>
 
-      <TerminalWindow path="shadrack@portfolio: ~/achievements">
-
-        <p className="font-mono text-green-400">
-          $ achievements
+        <p className="mt-2 text-gray-400">
+          Certifications, leadership and cybersecurity milestones.
         </p>
 
-        <ul className="mt-6 space-y-3">
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {achievements.map((item) => (
-            <li
-              key={item}
-              className="text-gray-300"
+            <div
+              key={item.title}
+              className="rounded-xl border border-green-500/20 bg-black/40 p-6 transition hover:-translate-y-2 hover:border-green-400"
             >
-              ✓ {item}
-            </li>
+              <div className="text-4xl">
+                {item.icon}
+              </div>
+
+              <h3 className="mt-4 text-xl font-bold text-white">
+                {item.title}
+              </h3>
+
+              <p className="mt-2 text-gray-400">
+                {item.description}
+              </p>
+
+              <span className="mt-4 inline-block rounded bg-green-500/20 px-3 py-1 text-sm text-green-400">
+                {item.year}
+              </span>
+            </div>
           ))}
-        </ul>
-
+        </div>
       </TerminalWindow>
-
     </section>
   );
 }
