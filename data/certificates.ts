@@ -32,7 +32,7 @@ export const certificates = [
     issuer: "Cyber Security Training",
     category: "Offensive Security",
     year: "2026",
-    file: "/certificates/RED TEAMING.pdf",
+    file: "/certificates/Red-teaming.pdf",
   },
   {
     name: "CompTIA PenTest+",
