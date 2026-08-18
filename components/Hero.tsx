@@ -68,7 +68,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/shadrack-musa-232557342/"
+              href="https://www.linkedin.com/in/musa-shadrack/"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-lg border border-blue-500 px-6 py-3 font-semibold text-blue-400 transition hover:bg-blue-500 hover:text-white"
