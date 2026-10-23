@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 160 160">
+<rect width="160" height="160" rx="32" fill="#102027"/>
+<rect x="7" y="7" width="146" height="146" rx="27"
+fill="none" stroke="#22D3EE" stroke-width="4"/>
+<circle cx="80" cy="80" r="57" fill="#22D3EE" opacity=".09"/>
+<text x="80" y="95" fill="#22D3EE"
+font-family="Arial,Helvetica,sans-serif"
+font-size="32" font-weight="800"
+text-anchor="middle">UDOM</text>
+</svg>
