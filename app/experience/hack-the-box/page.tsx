@@ -1,3 +1,4 @@
+import HTBContextFortress from "@/components/HTBContextFortress";
 import HTBOtherSolved from "@/components/HTBOtherSolved";
 import HTBMachines from "@/components/HTBMachines";
 import Link from "next/link";
@@ -33,6 +34,7 @@ export default function HackTheBoxExperiencePage() {
 
         <HTBMachines />
         <HTBOtherSolved />
+        <HTBContextFortress />
       </TerminalWindow>
     </section>
   );

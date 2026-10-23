@@ -29,6 +29,18 @@ const machines: SolvedMachine[] = [
     summary: "Completed HTB machine. A verified completion screenshot is available; technical findings have not yet been supplied.",
     image: "/evidence/htb/other-solved/makesense-solved.png",
   },
+  {
+    id: "pingpong", name: "PingPong", date: "17 Oct 2026", rank: "#1851", xp: 1365,
+    summary: "Verified HTB completion. Technical write-up not yet supplied; machine state unverified.", image: "/evidence/htb/other-solved/pingpong-solved.png",
+  },
+  {
+    id: "eloquia", name: "Eloquia", date: "17 Oct 2026", rank: "#1703", xp: 1365,
+    summary: "Insane Windows machine with verified HTB completion; active at the time of the listing. No public exploitation write-up.", image: "/evidence/htb/other-solved/eloquia-solved.png",
+  },
+  {
+    id: "autopilot", name: "Autopilot", date: "22 Oct 2026", rank: "#1014", xp: 1365,
+    summary: "Verified HTB completion. Technical write-up and retirement state are unverified.", image: "/evidence/htb/other-solved/autopilot-solved.png",
+  },
 ];
 
 export default function HTBOtherSolved() {
@@ -39,9 +51,9 @@ export default function HTBOtherSolved() {
         <div>
           <p className="font-mono text-xs tracking-[0.2em] text-cyan-300">// VERIFIED COMPLETIONS</p>
           <h2 id="htb-other-solved" className="mt-2 text-2xl font-extrabold text-white sm:text-3xl">Other Solved Machines</h2>
-          <p className="mt-2 max-w-2xl text-sm leading-7 text-slate-400">Three additional Hack The Box machine completions, with original proof images and concise technical summaries.</p>
+          <p className="mt-2 max-w-2xl text-sm leading-7 text-slate-400">6 documented Hack The Box machine completions, with original proof images and concise technical summaries.</p>
         </div>
-        <span className="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-4 py-2 font-mono text-xs font-semibold text-emerald-300">3 documented solves</span>
+        <span className="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-4 py-2 font-mono text-xs font-semibold text-emerald-300">6 documented solves</span>
       </div>
       <div className="mt-6 grid gap-5 md:grid-cols-2">
         {machines.slice(0, expanded ? machines.length : 2).map(machine => (
@@ -68,7 +80,7 @@ export default function HTBOtherSolved() {
         ))}
       </div>
       <button type="button" onClick={() => setExpanded(v => !v)} aria-expanded={expanded} className="mt-6 rounded-lg border border-emerald-400/40 bg-emerald-400/10 px-5 py-3 text-sm font-semibold text-emerald-300 transition hover:border-emerald-400 hover:bg-emerald-400/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400">
-        {expanded ? "Show fewer machines ↑" : "View all 3 solved machines →"}
+        {expanded ? "Show fewer machines ↑" : "View all 6 solved machines →"}
       </button>
     </section>
   );
