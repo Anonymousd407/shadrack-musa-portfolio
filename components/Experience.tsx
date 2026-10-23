@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import Image from "next/image";
 import { experience } from "@/data/experience";
 import TerminalWindow from "./TerminalWindow";
 
@@ -33,7 +35,20 @@ export default function Experience() {
 
                 <div>
 
-                  <h3 className="text-2xl font-bold text-green-400">
+                  <h3 className="flex items-center gap-4 text-2xl font-bold text-green-400">
+                    {/* Experience brand logos */}
+                    {"logo" in job && typeof job.logo === "string" && (
+                      <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-green-500/20 bg-[#132026] p-2">
+                        <Image
+                          src={job.logo}
+                          alt={`${job.company} logo`}
+                          width={42}
+                          height={42}
+                          unoptimized
+                          className="h-10 w-10 object-contain"
+                        />
+                      </span>
+                    )}
                     {job.company}
                   </h3>
 
@@ -56,6 +71,53 @@ export default function Experience() {
               <p className="mt-5 leading-7 text-gray-300">
                 {job.description}
               </p>
+              {job.company === "RAUT Company Limited — Capstone Audit" && (
+                <div className="mt-5 flex flex-col gap-4 rounded-xl border border-green-500/20 bg-[#101c20] p-4 sm:flex-row sm:items-center">
+                  <a
+                    href="/experience/ssqa-award-photo.jpg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-36 shrink-0 overflow-hidden rounded-lg border border-green-400/30 transition hover:border-green-400"
+                    aria-label="View original award photograph"
+                  >
+                    <img
+                      src="/experience/ssqa-award-photo.jpg"
+                      alt="Photograph of the 2026 startup competition award"
+                      className="h-44 w-full object-cover"
+                      loading="lazy"
+                    />
+                  </a>
+
+                  <div>
+                    <p className="font-semibold text-green-400">
+                      Practical Testing &amp; Evidence
+                    </p>
+                    <p className="mt-2 text-sm leading-7 text-gray-300">
+                      API validation, functional QA, RBAC testing,
+                      regression checks and documented bug reports.
+                    </p>
+                    <a
+                      href="https://yaspi.co/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-flex text-sm font-semibold text-cyan-300 hover:underline"
+                    >
+                      View Yaspi Platform ↗
+                    </a>
+                  </div>
+                </div>
+              )}
+
+
+              {job.evidenceHref && (
+                <Link
+                  href={job.evidenceHref}
+                  className="mt-5 inline-flex items-center gap-2 rounded-lg border border-green-500/40 px-4 py-2 text-sm font-semibold text-green-400 transition duration-300 hover:border-green-400 hover:bg-green-500/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                >
+                  View Labs &amp; Evidence
+                  <span aria-hidden="true">&rarr;</span>
+                </Link>
+              )}
 
             </div>
 
