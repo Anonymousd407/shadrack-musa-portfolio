@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { experience } from "@/data/experience";
+import HackerOneResearch from "./HackerOneResearch";
 import TerminalWindow from "./TerminalWindow";
 
 export default function Experience() {
@@ -71,6 +72,10 @@ export default function Experience() {
               <p className="mt-5 leading-7 text-gray-300">
                 {job.description}
               </p>
+              {job.company === "HackerOne" && (
+                <HackerOneResearch />
+              )}
+
               {job.company === "RAUT Company Limited — Capstone Audit" && (
                 <div className="mt-5 flex flex-col gap-4 rounded-xl border border-green-500/20 bg-[#101c20] p-4 sm:flex-row sm:items-center">
                   <a

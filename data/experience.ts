@@ -9,12 +9,13 @@ export const experience = [
   },
 
   {
-    company: "Cryptonic Area (CA)",
-    logo: "/brands/cryptonic-area.svg",
-    role: "Cyber Security & Ethical Hacking Intern",
-    period: "2026-present ",
+    company: "Hack The Box",
+    logo: "/brands/hackthebox.svg",
+    evidenceHref: "/experience/hack-the-box",
+    role: "Cyber Security Labs",
+    period: "2025 - Present",
     description:
-      "Participated in vulnerability assessments, penetration testing, and cybersecurity awareness activities.",
+      "Completed offensive security labs covering Active Directory, Web Exploitation, Linux, Windows and Cloud.",
   },
 
   {
@@ -27,13 +28,12 @@ export const experience = [
   },
 
   {
-    company: "Hack The Box",
-    logo: "/brands/hackthebox.svg",
-    evidenceHref: "/experience/hack-the-box",
-    role: "Cyber Security Labs",
-    period: "2025 - Present",
+    company: "Cryptonic Area (CA)",
+    logo: "/brands/cryptonic-area.svg",
+    role: "Cyber Security & Ethical Hacking Intern",
+    period: "2026-present ",
     description:
-      "Completed offensive security labs covering Active Directory, Web Exploitation, Linux, Windows and Cloud.",
+      "Participated in vulnerability assessments, penetration testing, and cybersecurity awareness activities.",
   },
 
   {
